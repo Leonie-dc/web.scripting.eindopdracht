@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit it!</title>
+
+  <!--Lettertypes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!--Stylesheet-->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <main class="spel-wrapper">
+
+    <section class="start-scherm" id="startScherm">
+      <!--Startblok met info en uitleg-->
+      <h1>Fruit it!</h1>
+
+      <p class="intro-tekst">
+        Reageer zo snel mogelijk op het juiste fruit. Soms moet je klikken,
+        soms op enter drukken, soms op spatie drukken
+        en soms op het pijltje omhoog drukken.
+      </p>
+
+      <div class="uitleg-kaart">
+        <h2>Zo speel je</h2>
+        <ul>
+          <li>Lees de opdracht bovenaan het scherm.</li>
+          <li>Voer de juiste actie uit voor het juiste fruit.</li>
+          <li>Bij een fruit dat niet bestaat doe je niets.</li>
+          <li>Laat dan gewoon de timer aflopen.</li>
+          <li>Bij een fout ben je verloren.</li>
+        </ul>
+      </div>
+
+      <button class="primaire-knop" id="startKnop">Start spel</button>
+    </section>
+
+    <section class="spel-scherm verberg" id="spelScherm">
+      <header class="spel-balk">
+        <div class="info-vak">
+          <span class="info-label">Level</span>
+          <span class="info-waarde" id="levelWaarde">1</span>
+        </div>
+
+        <!--opdracht-->
+        <div class="info-vak groot">
+          <span class="info-label">Opdracht</span>
+          <span class="opdracht-tekst" id="opdrachtTekst">Klik op de appel</span>
+        </div>
+
+        <!--score-->
+        <div class="info-vak">
+          <span class="info-label">Score</span>
+          <span class="info-waarde" id="scoreWaarde">0</span>
+        </div>
+      </header>
+
+      <!--timer-->
+      <div class="timer-balk">
+        <div class="timer-vulling" id="timerVulling"></div>
+      </div>
+
+      <!--Fruit-->
+      <section class="fruit-rooster">
+        <!--Fruit 1-->
+        <button class="fruit-knop appel" data-fruit="appel">
+          <span class="fruit-emoji">🍎</span>
+          <span class="fruit-naam">Appel</span>
+        </button>
+
+        <!--Fruit 2-->
+        <button class="fruit-knop banaan" data-fruit="banaan">
+          <span class="fruit-emoji">🍌</span>
+          <span class="fruit-naam">Banaan</span>
+        </button>
+
+        <!--Fruit 3-->
+        <button class="fruit-knop druiven" data-fruit="druiven">
+          <span class="fruit-emoji">🍇</span>
+          <span class="fruit-naam">Druiven</span>
+        </button>
+
+        <!--Fruit 4-->
+        <button class="fruit-knop aardbei" data-fruit="aardbei">
+          <span class="fruit-emoji">🍓</span>
+          <span class="fruit-naam">Aardbei</span>
+        </button>
+      </section>
+    </section>
+
+    <!--level behaald scherm-->
+    <section class="tussen-scherm verberg" id="tussenScherm">
+      <p class="bovenlijn">Goed bezig</p>
+      <h2 id="tussenTitel">Level 1 gehaald!</h2>
+      <p class="tussen-tekst">Maak je klaar voor het volgende level.</p>
+    </section>
+
+    <!--game over spel-->
+    <section class="game-over-scherm verberg" id="gameOverScherm">
+      <p class="bovenlijn">Game over</p>
+      <h2>Je bent verloren</h2>
+      <p class="eind-tekst">Je behaalde level <span id="behaaldLevel">1</span>.</p>
+      <p class="eind-tekst">Je score is <span id="gameOverScore">0</span>.</p>
+      <button class="primaire-knop" id="terugNaarStartKnop">Terug naar start</button>
+    </section>
+
+    <!--gewonnen spel-->
+    <section class="gewonnen-scherm verberg" id="gewonnenScherm">
+      <p class="bovenlijn">Proficiat</p>
+      <h2>Je bent gewonnen!</h2>
+      <p class="eind-tekst">Je eindscore is <span id="gewonnenScore">0</span>.</p>
+      <button class="primaire-knop" id="opnieuwSpelenKnop">Terug naar start</button>
+    </section>
+
+  </main>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

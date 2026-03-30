@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*ALgemene stijl pagina */
+body {
+  font-family: "Inter", sans-serif;
+  background: hsl(178, 29%, 22%);
+  color: hsl(178, 28%, 16%);
+  min-height: 100vh;
+}
+
+/* knoppen stijl */
+button {
+  font: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+/*Verbergen */
+.verberg {
+  display: none;
+}
+
+/*spel container*/
+.spel-wrapper {
+  width: min(1100px, calc(100% - 2rem));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+/*Alle schermen zelfde formaat*/
+.start-scherm,
+.spel-scherm,
+.tussen-scherm,
+.game-over-scherm,
+.gewonnen-scherm {
+  width: 100%;
+}
+
+/*Stijl van tussen schermen*/
+.start-scherm,
+.tussen-scherm,
+.game-over-scherm,
+.gewonnen-scherm {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  background: hsla(40, 14%, 97%, 0.84);
+  border: 1px solid hsla(178, 28%, 16%, 0.08);
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+}
+
+/*kleine tekst */
+.bovenlijn {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.85rem;
+  color: hsl(205, 18%, 40%);
+  margin-bottom: 1rem;
+}
+
+/*tietel sltijl*/
+h1,
+h2 {
+  font-family: "DM Serif Display", serif;
+  line-height: 1.1;
+}
+
+/*H1*/
+h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  margin-bottom: 1rem;
+}
+
+/*H2*/
+h2 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  margin-bottom: 1rem;
+}
+
+/*Body*/
+.intro-tekst,
+.eind-tekst,
+.tussen-tekst {
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+  color: hsl(205, 18%, 40%);
+}
+
+/*kaart startscherm*/
+.uitleg-kaart {
+  background: hsl(40, 17%, 93%);
+  border: 1px solid hsla(178, 28%, 16%, 0.06);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  text-align: left;
+  max-width: 540px;
+  margin: 0 auto 2rem;
+}
+
+/*tietel kaart*/
+.uitleg-kaart h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.9rem;
+}
+
+/*lijst inspring*/
+.uitleg-kaart ul {
+  padding-left: 1.2rem;
+}
+
+/*witruimte*/
+.uitleg-kaart li + li {
+  margin-top: 0.5rem;
+}
+
+/*stijl knoppen*/
+.primaire-knop {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(178, 29%, 22%);
+  color: hsl(40, 14%, 97%);
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+/*hover knoppen*/
+.primaire-knop:hover {
+  transform: translateY(-2px);
+  background: hsl(178, 28%, 16%);
+}
+
+/*spel scherm*/
+.spel-scherm {
+  background: hsla(40, 14%, 97%, 0.74);
+  border: 1px solid hsla(178, 28%, 16%, 0.08);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 14px 30px hsla(178, 28%, 16%, 0.08);
+}
+
+/*balk met level enz*/
+.spel-balk {
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*boxen in balk */
+.info-vak {
+  background: hsl(210, 34%, 90%);
+  border: 1px solid hsla(178, 28%, 16%, 0.06);
+  border-radius: 1.4rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+/*Middel box*/
+.info-vak.groot {
+  padding-inline: 1.4rem;
+}
+
+/*label box*/
+.info-label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: hsl(205, 18%, 40%);
+  margin-bottom: 0.4rem;
+}
+
+/*stijl tekst*/
+.info-waarde,
+.opdracht-tekst {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+/*kleur tekst*/
+.opdracht-tekst {
+  color: hsl(178, 29%, 22%);
+}
+
+/*Balk timer*/
+.timer-balk {
+  width: 100%;
+  height: 18px;
+  background:hsl(43, 86%, 91%);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/*Balk timer kleur*/
+.timer-vulling {
+  width: 100%;
+  height: 100%;
+  background: hsl(248, 32%, 85%);
+}
+
+/*Knoppen fruit*/
+.fruit-rooster {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+/*Stijl fruitknop*/
+.fruit-knop {
+  min-height: 220px;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: hsl(178, 28%, 16%);
+  box-shadow: 0 12px 24px hsla(178, 28%, 16%, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+/*Fruit grootte */
+.fruit-emoji {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+/*Naam fruit*/
+.fruit-naam {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+/*Appel knop kleur*/
+.appel {
+  background: hsl(22, 39%, 85%);
+}
+
+/*Bannaan knop kleur*/
+.banaan {
+  background: hsl(45, 57%, 75%);
+}
+
+/*Druif knop kleur*/
+.druiven {
+  background: hsl(250, 24%, 83%);
+}
+
+/*Aardbei knop kleur*/
+.aardbei {
+  background: hsl(210, 34%, 90%);
+}

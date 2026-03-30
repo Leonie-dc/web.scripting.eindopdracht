@@ -1,0 +1,137 @@
+@media (max-width: 820px) {
+  .spel-balk {
+    grid-template-columns: 1fr;
+  }
+}
+
+ @media (max-width: 640px) {
+  .spel-wrapper {
+    width: min(430px, calc(100% - 2rem));
+    padding: 1.5rem 0;
+  }
+
+  .spel-scherm {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    border-radius: 2rem;
+    background: hsl(145, 14%, 70%);
+  }
+
+  .spel-balk {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "level score"
+      "opdracht opdracht";
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .spel-balk .info-vak:nth-child(1) {
+    grid-area: level;
+  }
+
+  .spel-balk .info-vak:nth-child(2) {
+    grid-area: opdracht;
+  }
+
+  .spel-balk .info-vak:nth-child(3) {
+    grid-area: score;
+  }
+
+  .info-vak {
+    padding: 0.9rem;
+    background: hsl(210, 34%, 90%);
+    border-radius: 0;
+  }
+
+  .info-vak.groot {
+    padding: 1rem;
+  }
+
+  .info-label {
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .info-waarde {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .opdracht-tekst {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+  }
+
+  .timer-balk {
+    width: 85%;
+    height: 18px;
+    margin: 0 auto 1.2rem;
+    background: hsl(43, 40%, 82%);
+  }
+
+  .timer-vulling {
+    background: hsl(248, 32%, 85%);
+    transition: width 0.1s linear;
+  }
+
+  .fruit-rooster {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .fruit-knop {
+    min-height: 105px;
+    padding: 1rem 1.2rem;
+    border-radius: 1.8rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .fruit-emoji {
+    font-size: 2.8rem;
+  }
+
+  .fruit-naam {
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  .start-scherm,
+  .tussen-scherm,
+  .game-over-scherm,
+  .gewonnen-scherm {
+    padding: 1.5rem;
+    border-radius: 1.8rem;
+  }
+
+  .uitleg-kaart {
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro-tekst,
+  .eind-tekst,
+  .tussen-tekst {
+    font-size: 0.95rem;
+  }
+
+  .primaire-knop {
+    width: 100%;
+  }
+}
